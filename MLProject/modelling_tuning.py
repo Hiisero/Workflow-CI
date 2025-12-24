@@ -7,9 +7,9 @@ import mlflow.sklearn
 
 
 def main():
-    mlflow.set_tracking_uri("http://127.0.0.1:5000")
+    # mlflow.set_tracking_uri("http://127.0.0.1:5000")
     mlflow.set_experiment("Heart Disease Classification - Tuning V2")
-
+    
     df = pd.read_csv("heart_preprocessing.csv")
 
     X = df.drop("target", axis=1)
@@ -78,3 +78,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
